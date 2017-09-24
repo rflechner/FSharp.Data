@@ -55,7 +55,7 @@
 <span class="l">2: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="prep">#r</span> <span class="s">&quot;../../../../bin/FSharp.Data.dll&quot;</span>
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Data</span>
+<span class="k">open</span> <span class="i">FSharp</span><span class="o">.</span><span class="i">Data</span>
 </code></pre></td>
 </tr>
 </table>
@@ -74,11 +74,11 @@
 <span class="l">6: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="c">// 株価データをダウンロード</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">msft</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="t">CsvFile</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="f">Load</span>(<span class="s">&quot;http://ichart.finance.yahoo.com/table.csv?s=MSFT&quot;</span>)<span class="o">.</span><span class="f">Cache</span>()
+<span class="k">let</span> <span class="i">msft</span> <span class="o">=</span> <span class="i">CsvFile</span><span class="o">.</span><span class="i">Load</span>(<span class="s">&quot;http://ichart.finance.yahoo.com/table.csv?s=MSFT&quot;</span>)<span class="o">.</span><span class="i">Cache</span>()
 
 <span class="c">// HLOC形式で株価を表示</span>
-<span class="k">for</span> <span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="i">row</span> <span class="k">in</span> <span onmouseout="hideTip(event, 'fs3', 7)" onmouseover="showTip(event, 'fs3', 7)" class="i">msft</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="i">Rows</span> <span class="k">do</span>
-  <span onmouseout="hideTip(event, 'fs8', 9)" onmouseover="showTip(event, 'fs8', 9)" class="f">printfn</span> <span class="s">&quot;HLOC: (</span><span class="pf">%s</span><span class="s">, </span><span class="pf">%s</span><span class="s">, </span><span class="pf">%s</span><span class="s">)&quot;</span> (<span onmouseout="hideTip(event, 'fs6', 10)" onmouseover="showTip(event, 'fs6', 10)" class="i">row</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 11)" onmouseover="showTip(event, 'fs9', 11)" class="f">GetColumn</span> <span class="s">&quot;High&quot;</span>) (<span onmouseout="hideTip(event, 'fs6', 12)" onmouseover="showTip(event, 'fs6', 12)" class="i">row</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 13)" onmouseover="showTip(event, 'fs9', 13)" class="f">GetColumn</span> <span class="s">&quot;Low&quot;</span>) (<span onmouseout="hideTip(event, 'fs6', 14)" onmouseover="showTip(event, 'fs6', 14)" class="i">row</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 15)" onmouseover="showTip(event, 'fs9', 15)" class="f">GetColumn</span> <span class="s">&quot;Date&quot;</span>)
+<span class="k">for</span> <span class="i">row</span> <span class="k">in</span> <span class="i">msft</span><span class="o">.</span><span class="i">Rows</span> <span class="k">do</span>
+  <span class="i">printfn</span> <span class="s">&quot;HLOC: (%s, %s, %s)&quot;</span> (<span class="i">row</span><span class="o">.</span><span class="i">GetColumn</span> <span class="s">&quot;High&quot;</span>) (<span class="i">row</span><span class="o">.</span><span class="i">GetColumn</span> <span class="s">&quot;Low&quot;</span>) (<span class="i">row</span><span class="o">.</span><span class="i">GetColumn</span> <span class="s">&quot;Date&quot;</span>)
 </code></pre></td>
 </tr>
 </table>
@@ -123,10 +123,10 @@
 <span class="l">3: </span>
 <span class="l">4: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 16)" onmouseover="showTip(event, 'fs1', 16)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 17)" onmouseover="showTip(event, 'fs2', 17)" class="i">Data</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 18)" onmouseover="showTip(event, 'fs10', 18)" class="i">CsvExtensions</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span class="i">FSharp</span><span class="o">.</span><span class="i">Data</span><span class="o">.</span><span class="i">CsvExtensions</span>
 
-<span class="k">for</span> <span onmouseout="hideTip(event, 'fs6', 19)" onmouseover="showTip(event, 'fs6', 19)" class="i">row</span> <span class="k">in</span> <span onmouseout="hideTip(event, 'fs3', 20)" onmouseover="showTip(event, 'fs3', 20)" class="i">msft</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 21)" onmouseover="showTip(event, 'fs7', 21)" class="i">Rows</span> <span class="k">do</span>
-  <span onmouseout="hideTip(event, 'fs8', 22)" onmouseover="showTip(event, 'fs8', 22)" class="f">printfn</span> <span class="s">&quot;HLOC: (</span><span class="pf">%f</span><span class="s">, </span><span class="pf">%M</span><span class="s">, </span><span class="pf">%O</span><span class="s">)&quot;</span> (<span onmouseout="hideTip(event, 'fs6', 23)" onmouseover="showTip(event, 'fs6', 23)" class="i">row</span><span class="o">.</span>[<span class="s">&quot;High&quot;</span>]<span class="o">.</span><span class="f">AsFloat</span>()) (<span onmouseout="hideTip(event, 'fs6', 24)" onmouseover="showTip(event, 'fs6', 24)" class="i">row</span><span class="o">?</span><span class="i">Low</span><span class="o">.</span><span class="f">AsDecimal</span>()) (<span onmouseout="hideTip(event, 'fs6', 25)" onmouseover="showTip(event, 'fs6', 25)" class="i">row</span><span class="o">?</span><span class="i">Date</span><span class="o">.</span><span class="f">AsDateTime</span>())
+<span class="k">for</span> <span class="i">row</span> <span class="k">in</span> <span class="i">msft</span><span class="o">.</span><span class="i">Rows</span> <span class="k">do</span>
+  <span class="i">printfn</span> <span class="s">&quot;HLOC: (%f, %M, %O)&quot;</span> (<span class="i">row</span><span class="o">.</span>[<span class="s">&quot;High&quot;</span>]<span class="o">.</span><span class="i">AsFloat</span>()) (<span class="i">row</span><span class="o">?</span><span class="i">Low</span><span class="o">.</span><span class="i">AsDecimal</span>()) (<span class="i">row</span><span class="o">?</span><span class="i">Date</span><span class="o">.</span><span class="i">AsDateTime</span>())
 </code></pre></td>
 </tr>
 </table>
@@ -141,9 +141,9 @@
 <span class="l">4: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="c">// 終値が始値よりも高いもののうち、上位10位の株価をTSV(タブ区切り)形式で保存します：</span>
-<span onmouseout="hideTip(event, 'fs3', 26)" onmouseover="showTip(event, 'fs3', 26)" class="i">msft</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 27)" onmouseover="showTip(event, 'fs11', 27)" class="f">Filter</span>(<span class="k">fun</span> <span onmouseout="hideTip(event, 'fs6', 28)" onmouseover="showTip(event, 'fs6', 28)" class="i">row</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs6', 29)" onmouseover="showTip(event, 'fs6', 29)" class="i">row</span><span class="o">?</span><span class="i">Close</span><span class="o">.</span><span class="f">AsFloat</span>() <span class="o">&gt;</span> <span onmouseout="hideTip(event, 'fs6', 30)" onmouseover="showTip(event, 'fs6', 30)" class="i">row</span><span class="o">?</span><span class="i">Open</span><span class="o">.</span><span class="f">AsFloat</span>())
-    <span class="o">.</span><span class="f">Truncate</span>(<span class="n">10</span>)
-    <span class="o">.</span><span class="f">SaveToString</span>(<span class="s">&#39;\t&#39;</span>)
+<span class="i">msft</span><span class="o">.</span><span class="i">Filter</span>(<span class="k">fun</span> <span class="i">row</span> <span class="k">-&gt;</span> <span class="i">row</span><span class="o">?</span><span class="i">Close</span><span class="o">.</span><span class="i">AsFloat</span>() <span class="o">&gt;</span> <span class="i">row</span><span class="o">?</span><span class="i">Open</span><span class="o">.</span><span class="i">AsFloat</span>())
+    <span class="o">.</span><span class="i">Truncate</span>(<span class="n">10</span>)
+    <span class="o">.</span><span class="i">SaveToString</span>(<span class="s">&#39;\t&#39;</span>)
 </code></pre></td>
 </tr>
 </table>
@@ -159,17 +159,6 @@ F# 型プロバイダーについて説明しています。
 <li><a href="../../reference/fsharp-data-csvextensions.html">API リファレンス: CsvExtensions モジュール</a></li>
 </ul>
 
-<div class="tip" id="fs1">Multiple items<br />namespace FSharp<br /><br />--------------------<br />namespace Microsoft.FSharp</div>
-<div class="tip" id="fs2">Multiple items<br />namespace FSharp.Data<br /><br />--------------------<br />namespace Microsoft.FSharp.Data</div>
-<div class="tip" id="fs3">val msft : Runtime.CsvFile&lt;CsvRow&gt;<br /><br />Full name: CsvFile.msft</div>
-<div class="tip" id="fs4">type CsvFile =<br />&#160;&#160;inherit CsvFile&lt;CsvRow&gt;<br />&#160;&#160;private new : readerFunc:Func&lt;TextReader&gt; * ?separators:string * ?quote:char * ?hasHeaders:bool * ?ignoreErrors:bool * ?skipRows:int -&gt; CsvFile<br />&#160;&#160;member private GetColumnIndex : columnName:string -&gt; int<br />&#160;&#160;static member AsyncLoad : uri:string * ?separators:string * ?quote:char * ?hasHeaders:bool * ?ignoreErrors:bool * ?skipRows:int -&gt; Async&lt;CsvFile&gt;<br />&#160;&#160;static member Load : uri:string * ?separators:string * ?quote:char * ?hasHeaders:bool * ?ignoreErrors:bool * ?skipRows:int -&gt; CsvFile<br />&#160;&#160;static member Load : reader:TextReader * ?separators:string * ?quote:char * ?hasHeaders:bool * ?ignoreErrors:bool * ?skipRows:int -&gt; CsvFile<br />&#160;&#160;static member Load : stream:Stream * ?separators:string * ?quote:char * ?hasHeaders:bool * ?ignoreErrors:bool * ?skipRows:int -&gt; CsvFile<br />&#160;&#160;static member Parse : text:string * ?separators:string * ?quote:char * ?hasHeaders:bool * ?ignoreErrors:bool * ?skipRows:int -&gt; CsvFile<br /><br />Full name: FSharp.Data.CsvFile</div>
-<div class="tip" id="fs5">static member CsvFile.Load : uri:string * ?separators:string * ?quote:char * ?hasHeaders:bool * ?ignoreErrors:bool * ?skipRows:int -&gt; CsvFile<br />static member CsvFile.Load : reader:System.IO.TextReader * ?separators:string * ?quote:char * ?hasHeaders:bool * ?ignoreErrors:bool * ?skipRows:int -&gt; CsvFile<br />static member CsvFile.Load : stream:System.IO.Stream * ?separators:string * ?quote:char * ?hasHeaders:bool * ?ignoreErrors:bool * ?skipRows:int -&gt; CsvFile</div>
-<div class="tip" id="fs6">val row : CsvRow</div>
-<div class="tip" id="fs7">property Runtime.CsvFile.Rows: seq&lt;CsvRow&gt;</div>
-<div class="tip" id="fs8">val printfn : format:Printf.TextWriterFormat&lt;&#39;T&gt; -&gt; &#39;T<br /><br />Full name: Microsoft.FSharp.Core.ExtraTopLevelOperators.printfn</div>
-<div class="tip" id="fs9">member CsvRow.GetColumn : columnName:string -&gt; string<br />member CsvRow.GetColumn : index:int -&gt; string</div>
-<div class="tip" id="fs10">module CsvExtensions<br /><br />from FSharp.Data</div>
-<div class="tip" id="fs11">member Runtime.CsvFile.Filter : predicate:System.Func&lt;&#39;RowType,bool&gt; -&gt; Runtime.CsvFile&lt;&#39;RowType&gt;</div>
 
         </div>
         <div class="span3">
