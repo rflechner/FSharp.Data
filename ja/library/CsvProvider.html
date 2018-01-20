@@ -487,9 +487,15 @@ First, 50,                        3
 データセットを小さなサイズに変形した後に限定すべきです：</p>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs48', 133)" onmouseover="showTip(event, 'fs48', 133)" class="i">stocks</span> <span class="o">=</span> <span class="i">CsvProvider</span><span class="o">&lt;</span><span class="s">&quot;http://www.google.com/finance/historical?q=MSFT&amp;output=csv&quot;</span>, <span class="i">CacheRows</span><span class="o">=</span><span class="k">false</span><span class="o">&gt;</span><span class="o">.</span><span class="i">GetSample</span>()
-<span onmouseout="hideTip(event, 'fs48', 134)" onmouseover="showTip(event, 'fs48', 134)" class="i">stocks</span><span class="o">.</span><span class="i">Take</span>(<span class="n">10</span>)<span class="o">.</span><span class="i">Cache</span>()
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> [&lt;<span onmouseout="hideTip(event, 'fs48', 133)" onmouseover="showTip(event, 'fs48', 133)" class="t">Literal</span>&gt;] <span onmouseout="hideTip(event, 'fs49', 134)" onmouseover="showTip(event, 'fs49', 134)" class="i">``Sacremento Real Estate``</span> <span class="o">=</span> 
+  <span class="s">&quot;http://samplecsvs.s3.amazonaws.com/Sacramentorealestatetransactions.csv&quot;</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs50', 135)" onmouseover="showTip(event, 'fs50', 135)" class="i">realEstate</span> <span class="o">=</span> <span class="i">CsvProvider</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs49', 136)" onmouseover="showTip(event, 'fs49', 136)" class="i">``Sacremento Real Estate``</span>, <span class="i">CacheRows</span><span class="o">=</span><span class="k">false</span><span class="o">&gt;</span><span class="o">.</span><span class="i">GetSample</span>()
+<span onmouseout="hideTip(event, 'fs50', 137)" onmouseover="showTip(event, 'fs50', 137)" class="i">realEstate</span><span class="o">.</span><span class="i">Take</span>(<span class="n">10</span>)<span class="o">.</span><span class="i">Cache</span>()
 </code></pre></td>
 </tr>
 </table>
@@ -549,7 +555,9 @@ CSVドキュメントを動的に処理するための詳しい説明があり�
 <div class="tip" id="fs45">val defaultArg : arg:&#39;T option -&gt; defaultValue:&#39;T -&gt; &#39;T<br /><br />Full name: Microsoft.FSharp.Core.Operators.defaultArg</div>
 <div class="tip" id="fs46">val titanic1 : obj<br /><br />Full name: CsvProvider.titanic1</div>
 <div class="tip" id="fs47">val titanic2 : obj<br /><br />Full name: CsvProvider.titanic2</div>
-<div class="tip" id="fs48">val stocks : obj<br /><br />Full name: CsvProvider.stocks</div>
+<div class="tip" id="fs48">Multiple items<br />type LiteralAttribute =<br />&#160;&#160;inherit Attribute<br />&#160;&#160;new : unit -&gt; LiteralAttribute<br /><br />Full name: Microsoft.FSharp.Core.LiteralAttribute<br /><br />--------------------<br />new : unit -&gt; LiteralAttribute</div>
+<div class="tip" id="fs49">val ( Sacremento Real Estate ) : string<br /><br />Full name: CsvProvider.( Sacremento Real Estate )</div>
+<div class="tip" id="fs50">val realEstate : obj<br /><br />Full name: CsvProvider.realEstate</div>
 
         </div>
         <div class="span3">
