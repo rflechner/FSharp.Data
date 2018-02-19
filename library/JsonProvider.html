@@ -184,14 +184,12 @@ Applied to the previous example this would be:</p>
 <span class="l">3: </span>
 <span class="l">4: </span>
 <span class="l">5: </span>
-<span class="l">6: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">type</span> <span onmouseout="hideTip(event, 'fs24', 50)" onmouseover="showTip(event, 'fs24', 50)" class="t">People2</span> <span class="o">=</span> <span class="i">JsonProvider</span><span class="o">&lt;</span><span class="s">&quot;&quot;&quot; </span>
 <span class="s">  [ { &quot;name&quot;:&quot;John&quot;, &quot;age&quot;:94 }, </span>
 <span class="s">    { &quot;name&quot;:&quot;Tomas&quot; } ] &quot;&quot;&quot;</span>, <span class="i">SampleIsList</span><span class="o">=</span><span class="k">true</span><span class="o">&gt;</span>
 
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs25', 51)" onmouseover="showTip(event, 'fs25', 51)" class="i">person</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs24', 52)" onmouseover="showTip(event, 'fs24', 52)" class="i">People2</span><span class="o">.</span><span class="i">Parse</span>(<span class="s">&quot;&quot;&quot;{ &quot;name&quot;:&quot;Gustavo&quot; }&quot;&quot;&quot;</span>)
-	
 </code></pre></td>
 </tr>
 </table>
